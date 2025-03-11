@@ -17,6 +17,7 @@ unit tests and `examples` contains simple examples of using these tools.
 
 ## Build and run project
 
-To build this project first run `cmake -S . -B build` from root. Once you run this,
+To build this project you will have to have `cmake` installed on you system. First run 
+`cmake -S . -B build` from root. Once you run this,
 it won't be necessary to run it again, unless you modify the `CMakeLists.txt` file.
 To compile and run source files, first cd into `build` and then run `make && ./dna-processing-lib`.
