@@ -1,3 +1,0 @@
-/home/pogacha/progAAAAAAA/LPL/C/projects/dna-processing-lib/build/CMakeFiles/dna-processing-lib.dir
-/home/pogacha/progAAAAAAA/LPL/C/projects/dna-processing-lib/build/CMakeFiles/edit_cache.dir
-/home/pogacha/progAAAAAAA/LPL/C/projects/dna-processing-lib/build/CMakeFiles/rebuild_cache.dir
