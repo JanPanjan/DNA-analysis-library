@@ -33,13 +33,10 @@ Result read_dna_sequence(const char *filename, SequenceInfo *sequence_info) {
   char c;
   while ((c = fgetc(file)) != EOF && c != '\n' &&
          i < MAX_SEQUENCE_LENGTH - 1) { // need 1 for null-terminating character
-
-    // add check to see if only A,T,C or G are in the sequence
-    if (c != 'A' && c != 'T' && c != 'C' && c != 'G' && isalpha(c)) {
-      printf("cur char: %c\n", c);
-      return (Result){READER_FAIL, __LINE__, __FILE__};
+    // add check to see if only A, T, C or G are in the sequence
+    if (c != 'A' && c != 'T' && c != 'C' && c != 'G') {
+      return (Result){DNA_ANALYSIS_INVALID_CHARACTER, __LINE__, __FILE__};
     }
-
     sequence_info->sequence[i] = toupper(c);
     sequence_info->length++;
     i++;
