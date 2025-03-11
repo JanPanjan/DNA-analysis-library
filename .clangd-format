@@ -1,0 +1,12 @@
+---
+BasedOnStyle: LLVM
+AlwaysAfterOpenBracket: BAS_DontAlign
+AlignArrayOfStructures: AIAS_Left
+AlignConsecutiveAssignements:
+	Enabled: true
+	AcrossEmptyLines: false
+	AcrossComments: false
+IndentWidth: 4
+TabWidth: 4
+UseTab: Never
+...
