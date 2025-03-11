@@ -31,7 +31,8 @@ typedef enum {
 typedef struct {
   ResultCode result_code;
   int linenr;
-  const char *file;
+  char *file;
+  char *context;
 } Result;
 
 #endif // !RESULT_H

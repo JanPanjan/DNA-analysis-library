@@ -7,12 +7,12 @@
 /*
  * Counts length of the given DNA sequence.
  */
-Result count_sequence_length(SequenceInfo *sequence);
+Result count_sequence_length(Sequence *sequence);
 
 /*
  * Counts occurences of all nucleotides in the given sequence and updates
  * corresponding NucleotideCounts value.
  */
-Result count_nucleotide_occurences(SequenceInfo *sequence_info);
+Result count_nucleotide_occurences(Sequence *sequence_info);
 
 #endif

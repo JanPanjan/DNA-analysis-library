@@ -18,9 +18,10 @@ typedef struct {
  * Information about a specific sequence
  */
 typedef struct {
-  char *sequence;
+  char *raw;
   long length;
   NucleotideCounts counts;
-} SequenceInfo;
+  // float GC_content;
+} Sequence;
 
 #endif // !DNA_TYPES_H

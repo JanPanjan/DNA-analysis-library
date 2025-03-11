@@ -12,15 +12,20 @@ typedef struct {
 } ResultInfo;
 
 /*
- * Array of ErrorInfo messages is defined in error_handling.c, here we only tell
- * the compiler it exists
+ * Array of ResultInfo messages is defined in error_handling.c, here we only
+ * tell the compiler it exists
  */
-extern const ResultInfo error_messages[];
+extern const ResultInfo result_messages[];
+
+/*
+ * Displays all results in result_messages.
+ */
+void display_all_results();
 
 /*
  * Displays error code (Result), coresponding error message and exits the
  * program
  */
-void throw_error(Result result);
+void get_result(Result result);
 
 #endif // !ERROR_HANDLING_H

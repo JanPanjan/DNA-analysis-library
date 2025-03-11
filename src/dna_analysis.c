@@ -1,4 +1,5 @@
 #include "../include/dna_analysis.h"
+
 #include <ctype.h>
 
 /*
@@ -7,14 +8,14 @@
  * counter. If a mismatch occurs (invalid characters, all other than A, T, C or
  * G), it returns error.
  */
-Result count_nucleotide_occurences(SequenceInfo *sequence_info) {
+Result count_nucleotide_occurences(Sequence *sequence_info) {
   sequence_info->counts.a_count = 0;
   sequence_info->counts.t_count = 0;
   sequence_info->counts.c_count = 0;
   sequence_info->counts.g_count = 0;
 
-  for (int i = 0; sequence_info->sequence[i] != '\0'; i++) {
-    char nucleotide = toupper(sequence_info->sequence[i]);
+  for (int i = 0; sequence_info->raw[i] != '\0'; i++) {
+    char nucleotide = toupper(sequence_info->raw[i]);
 
     switch (nucleotide) {
     case 'A':
@@ -30,9 +31,12 @@ Result count_nucleotide_occurences(SequenceInfo *sequence_info) {
       (sequence_info->counts.g_count)++;
       break;
     case 'H':
-      return (Result){DNA_ANALYSIS_INVALID_CHARACTER, __LINE__, __FILE__};
+      return (Result){
+          DNA_ANALYSIS_INVALID_CHARACTER, __LINE__, __FILE__,
+          "Check input for invalid characters. Only A, T, C and G allowed."};
     }
   }
 
-  return (Result){RESULT_SUCCESS, __LINE__, __FILE__};
+  return (Result){RESULT_SUCCESS, __LINE__, __FILE__,
+                  "Successfully counted nucleotide occurences."};
 }

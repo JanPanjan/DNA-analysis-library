@@ -5,6 +5,7 @@
 #define ALLOCATOR_H
 
 #include "result.h"
+
 #include <stdlib.h>
 
 /* Allocates memory for given size and saves allocation result code in the

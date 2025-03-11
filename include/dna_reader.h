@@ -18,6 +18,6 @@ extern const int MAX_SEQUENCE_LENGTH;
  * making the filename pointer a constant, we make sure that the contents of the
  * file will not be changed, they will only be read from.
  */
-Result read_dna_sequence(const char *filename, SequenceInfo *sequence_info);
+Result read_dna_sequence(const char *filename, Sequence *sequence_info);
 
 #endif
