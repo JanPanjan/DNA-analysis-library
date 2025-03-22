@@ -4,8 +4,9 @@
  */
 #ifndef DNA_TYPES_H
 #define DNA_TYPES_H
+
 /*
- * Nucleotide occurences in a sequence
+ * Nucleotide occurrences in a sequence
  */
 typedef struct {
   int a_count;

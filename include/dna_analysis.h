@@ -10,9 +10,9 @@
 Result count_sequence_length(Sequence *sequence);
 
 /*
- * Counts occurences of all nucleotides in the given sequence and updates
+ * Counts occurrences of all nucleotides in the given sequence and updates
  * corresponding NucleotideCounts value.
  */
-Result count_nucleotide_occurences(Sequence *sequence_info);
+Result count_nucleotide_occurrences(Sequence *sequence_info);
 
 #endif

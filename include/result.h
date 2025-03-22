@@ -25,8 +25,7 @@ typedef enum {
 } ResultCode;
 
 /*
- * Wrap result codes into a Result struct with line number and file where result
- * occured
+ * Wrap result codes into a Result struct with line number and file where result occurred
  */
 typedef struct {
   ResultCode result_code;
